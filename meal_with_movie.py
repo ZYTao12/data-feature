@@ -23,7 +23,7 @@ def get_meal_info(meal_name):
     return None
 
 def get_country_code_from_demonym(demonym):
-    # Load demonyms CSV file (you'll need to create or download this file)
+    # Load demonyms CSV file
     df = pd.read_csv("demonyms.csv")
     country = df[df["Demonym"] == demonym]["Country"].values
     country_code = coco.convert(names=country, to='ISO3')
