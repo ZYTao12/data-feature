@@ -2,8 +2,12 @@ import requests
 import random
 import pandas as pd
 import country_converter as coco
+import os
+from dotenv import load_dotenv
 
-TVDB_API_KEY = "61444215-269d-4202-a5ef-fad3724d4b05"
+load_dotenv()  # Load environment variables from .env file
+
+TVDB_API_KEY = os.getenv("TVDB_API_KEY")
 # TheMealDB API endpoint
 MEAL_API_URL = "https://www.themealdb.com/api/json/v1/1/search.php"
 
